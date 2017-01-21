@@ -7,6 +7,7 @@ namespace SceneTransitions {
 		TransitionTestSceneA,
         TransitionTestSceneB,
 		LoadingScene,
-		
+		Scene00,
+		Scene01,
 	}
 }

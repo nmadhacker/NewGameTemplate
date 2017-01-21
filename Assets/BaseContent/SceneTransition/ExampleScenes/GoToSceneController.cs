@@ -14,6 +14,7 @@ namespace SceneTransitions
         public void ToScene()
         {
             SceneManager.Instance.PushToScene(scene, this.transitionInfo, true, useLoading);
+
         }
     }
 }
