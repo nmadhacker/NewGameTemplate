@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 public class waveScript : MonoBehaviour {
 
-    LineRenderer lineRenderer;
+	public int Points {get { return lineRenderer.numPositions; } }
+
+	LineRenderer lineRenderer;
 
     public int size;
 

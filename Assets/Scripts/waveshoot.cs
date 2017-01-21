@@ -30,11 +30,11 @@ public class waveshoot : BaseWeapon {
 		createTrailCoroutine = StartCoroutine (CreateTrailCoroutine ());
 	}
 
-	IEnumerator CreateTrailCoroutine()
+	IEnumerator CreateTrailCoroutine(waveScript instance)
 	{
 		while (true) 
 		{
-			instWave.GetComponent<waveScript>().createUpdate();
+			instance.createUpdate();
 			yield return null;
 		}
 	}
