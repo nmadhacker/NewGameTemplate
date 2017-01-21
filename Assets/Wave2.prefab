@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 68945584468283226}
   - component: {fileID: 50758869109855742}
   m_Layer: 0
-  m_Name: Wave
+  m_Name: Wave2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,10 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 0
-  wLength: 0.5
+  wLength: 5
   wWidth: 0.5
   res: 4
-  shootSpeed: 0.05
+  shootSpeed: 0.03
   faceRight: 1
 --- !u!120 &120885574409431916
 LineRenderer:

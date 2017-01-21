@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class waveshoot : BaseWeapon {
 
-    public Transform platform;
+//	public enum waves {
+//		wave1, wave2, wave3,
+//	}
 
+	public Transform[] wave;
+	[SerializeField] public Transform currentWave;
+	private int waveType;
     public Transform spawnLocation;
 
     Transform instWave;
 
 	Coroutine createTrailCoroutine;
 
+	void Awake () {
+		currentWave = wave [0];
+	}
+
 	protected override void StartAnimation ()
 	{
 		base.StartAnimation ();
-		instWave = Instantiate(platform, spawnLocation.position, Quaternion.identity);
+		instWave = Instantiate(currentWave, spawnLocation.position, Quaternion.identity);
         instWave.GetComponent<waveScript>().faceRight = GetComponent<Player>().facingRight;
 		createTrailCoroutine = StartCoroutine (CreateTrailCoroutine ());
 	}
@@ -34,5 +43,23 @@ public class waveshoot : BaseWeapon {
 		base.StopAnimation ();
 		StopCoroutine (createTrailCoroutine);
 		instWave.GetComponent<waveScript>().startMove();
+	}
+
+	public override void nextWave()
+	{
+		waveType++;
+		if (waveType >= wave.Length) {
+			waveType = 0;
+		}
+		currentWave = wave[waveType];
+	}
+
+	public override void previousWave()
+	{
+		waveType--;
+		if (waveType < 0) {
+			waveType = 2;
+		}
+		currentWave = wave[waveType];
 	}
 }

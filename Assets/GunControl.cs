@@ -10,6 +10,8 @@ public class GunControl : DisposableSingleton<GunControl>
 
 	public bool IsFiring { get; private set;}
 
+	public int waveType;
+
 	public void Update()
 	{
 		if (Input.GetButtonDown ("Fire1") && currentWeapon.Fire()) 
@@ -22,6 +24,7 @@ public class GunControl : DisposableSingleton<GunControl>
 			IsFiring = false;
 			currentWeapon.Stop ();
 		}
+		waveTypeSelector ();
 	}
 
 	IEnumerator TriggerFireAnimation()
@@ -29,5 +32,14 @@ public class GunControl : DisposableSingleton<GunControl>
 		yield return new WaitForSeconds (fireStartDelay);
 		m_Anim.SetBool ("Fire",true);
 		yield break;
+	}
+
+	private void waveTypeSelector() {
+		if (Input.GetKeyDown (KeyCode.Q)) {
+			currentWeapon.nextWave ();
+		}
+		if (Input.GetKeyDown (KeyCode.E)) {
+			currentWeapon.previousWave ();
+		}
 	}
 }

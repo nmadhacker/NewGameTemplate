@@ -83,4 +83,9 @@ public abstract class BaseWeapon : MonoBehaviour
 		onCooldown = false;
 		yield return null; // wait an extra frame
 	}
+
+	public virtual void nextWave (){
+	}
+	public virtual void previousWave(){
+	}
 }

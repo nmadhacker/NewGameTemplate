@@ -10,11 +10,12 @@ public class waveScript : MonoBehaviour {
     public float wLength;
     public float wWidth;
 
-
     public float res;
 
-
     public float shootSpeed;
+
+	private float waveLifeTime = 4.0f;
+
     float shootTimer;
     // Use this for initialization
 
@@ -24,12 +25,7 @@ public class waveScript : MonoBehaviour {
 
     int offset;
 
-
-
     public bool faceRight = true;
-
-
-
 
     Vector3 nor;
     Vector3 oldpos;
@@ -44,13 +40,10 @@ public class waveScript : MonoBehaviour {
         lineRenderer = GetComponent<LineRenderer>();
     }
 	void Start () {
-        
-
         //lineRenderer.numPositions = (int)(size * res);
 
         //GenerateRoundWave();
         //generateCollider();
-
 
         offset = 0;
     }
@@ -58,9 +51,7 @@ public class waveScript : MonoBehaviour {
     void FixedUpdate()
     {
         //lineRenderer.numPositions = (int) (size * res);
-        
-        
-    }
+    }                                                                                                                                                              
 
 	// Update is called once per frame
 	void Update () {
@@ -165,9 +156,7 @@ public class waveScript : MonoBehaviour {
 
         int n = lineRenderer.numPositions;
         Vector3[] positions = new Vector3[n];
-        lineRenderer.GetPositions(positions);
-
-        
+        lineRenderer.GetPositions(positions);     
 
         //print(n);
         //print(positions);
