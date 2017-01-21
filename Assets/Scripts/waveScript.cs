@@ -20,6 +20,8 @@ public class waveScript : MonoBehaviour {
 
     bool canMove = false;
 
+    bool deleting = false;
+
     int offset;
     
 
@@ -55,6 +57,15 @@ public class waveScript : MonoBehaviour {
             }
         }
 
+        if (deleting)
+        {
+            shootTimer += Time.deltaTime;
+            if (shootTimer >= shootSpeed / res)
+            {
+                deleteWave();
+                shootTimer -= (shootSpeed / res);
+            }
+        }
 
     }
 
@@ -101,7 +112,7 @@ public class waveScript : MonoBehaviour {
                 
                 pos = new Vector3( ( ( (i+offset) / res ) * wWidth) , Mathf.Cos((i+offset)/ res) * wLength, 0);
 
-                print(pos);
+                //print(pos);
                 lineRenderer.SetPosition(i, pos);
             }
 
@@ -123,8 +134,8 @@ public class waveScript : MonoBehaviour {
 
         
 
-        print(n);
-        print(positions);
+        //print(n);
+        //print(positions);
 
         Vector2[] positions2 = new Vector2[n];
 
@@ -197,8 +208,53 @@ public class waveScript : MonoBehaviour {
 
             }
 
-            
+        }
+    }
 
+    void deleteWave()
+    {
+
+        Vector3 pos = Vector3.zero;
+
+        int npos = lineRenderer.numPositions;
+
+        
+
+        for (int i = 0; i < npos; i++)
+        {
+            if (i < (npos - 1))
+            {
+                pos = lineRenderer.GetPosition(i + 1);
+                lineRenderer.SetPosition(i, pos);
+            }
+            else
+            {
+
+                pos = new Vector3((((i + offset) / res) * wWidth), Mathf.Cos((i + offset) / res) * wLength, 0);
+
+                //print(pos);
+                lineRenderer.SetPosition(i, pos);
+            }
+
+
+        }
+
+        lineRenderer.numPositions = npos - 1;
+
+        if(npos-1 == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("wavehit");
+        if(collision.collider.tag != "Player")
+        {
+            canMove = false;
+            deleting = true;
         }
     }
 }
