@@ -20,6 +20,7 @@ public class GunControl : MonoBehaviour
 		if (IsFiring && Input.GetButtonUp ("Fire1")) 
 		{
 			m_Anim.SetBool ("Fire", false);
+			IsFiring = false;
 		}
 	}
 
