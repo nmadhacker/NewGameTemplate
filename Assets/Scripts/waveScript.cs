@@ -167,8 +167,6 @@ public class waveScript : MonoBehaviour {
         Vector3[] positions = new Vector3[n];
         lineRenderer.GetPositions(positions);
 
-        
-
         //print(n);
         //print(positions);
 
@@ -179,6 +177,10 @@ public class waveScript : MonoBehaviour {
             positions2[i] = positions[i];
         }
 
+		if (positions2 == null || positions2.Length < 2) 
+		{
+			return; // Unable to generate collider with invalid amount of points
+		}
 
         edgeCollider.points = positions2;
     }
@@ -300,7 +302,6 @@ public class waveScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("wavehit");
         if(collision.collider.tag != "Player" && collision.collider != justHit)
         {
             canMove = false;
