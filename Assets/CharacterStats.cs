@@ -40,7 +40,10 @@ public class CharacterStats : DisposableSingleton<CharacterStats>
 
 	void Update () 
 	{
-		EnergyRegen ();
+		if (!GunControl.Instance.IsFiring && Energy < 100) {
+			EnergyRegen ();
+		}
+
 	}
 
 	void EnergyRegen()
