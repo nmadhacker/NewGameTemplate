@@ -8,26 +8,34 @@ public abstract class BaseWeapon : MonoBehaviour
 	[Range(0.1f,60f)] public float cooldown;
 
 	bool onCooldown;
+	public bool IsFiring{ get; private set; }
 
 	public virtual bool Fire()
 	{
-		if (onCooldown) 
+		if (onCooldown || IsFiring) 
 		{
 			return false;
 		}
+		IsFiring = true;
+		return IsFiring;
+	}
+
+	public virtual bool Stop()
+	{
+		if (!IsFiring) 
+		{
+			return false;
+		}
+
 		onCooldown = true;
+		IsFiring = false;
 		StartCoroutine (WaitForCooldownCoroutine ());
-		return true;
+		return IsFiring;
 	}
 
 	IEnumerator WaitForCooldownCoroutine()
 	{
-		float startTime = Time.timeSinceLevelLoad;
-		float endTime = startTime = cooldown;
-		while (Time.timeSinceLevelLoad < endTime) 
-		{
-			yield return null;
-		}
+		yield return new WaitForSeconds (cooldown);
 		onCooldown = false;
 		yield return null; // wait an extra frame
 	}
