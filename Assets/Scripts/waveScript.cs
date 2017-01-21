@@ -168,6 +168,9 @@ public class waveScript : MonoBehaviour {
             positions2[i] = positions[i];
         }
 
+		if (positions2 == null || positions2.Length < 2) {
+			return; // unable to set invalid positions
+		}
 
         edgeCollider.points = positions2;
     }
