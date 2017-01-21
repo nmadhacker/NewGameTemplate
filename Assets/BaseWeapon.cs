@@ -10,6 +10,7 @@ public abstract class BaseWeapon : MonoBehaviour
 	bool onCooldown;
 	public bool IsFiring{ get; private set; }
 
+
 	public virtual bool Fire()
 	{
 		if (onCooldown || IsFiring) 
@@ -29,8 +30,23 @@ public abstract class BaseWeapon : MonoBehaviour
 
 		onCooldown = true;
 		IsFiring = false;
+		StopCoroutine (ConsumeEnergyCoroutine ());
 		StartCoroutine (WaitForCooldownCoroutine ());
 		return IsFiring;
+	}
+
+	IEnumerator ConsumeEnergyCoroutine()
+	{
+		while (IsFiring) 
+		{
+			if (!CharacterStats.Instance.UpdateEnergy (-energyCost * Time.deltaTime)) 
+			{
+				Stop ();
+				break;
+			}
+
+			yield return null;
+		}
 	}
 
 	IEnumerator WaitForCooldownCoroutine()

@@ -4,11 +4,48 @@ using UnityEngine;
 
 public class CharacterStats : DisposableSingleton<CharacterStats>
 {
-	[Range(0,10)]  public float Health;
-	[Range(0,100)] public float WeaponEnergy;
+	[Range(0,100)]  public float Health;
+	[Range(0,100)] public float Energy;
+	[Range(0.1f,100f)] public float EnergyRegenRate;
 
-	public void UpdateHealth(float delta)
+	public bool UpdateHealth(float delta)
 	{
-		
+		if ((delta > 0 && Health >= 100) || (delta < 0 && Health <= 0)) 
+		{
+			return false;
+		}
+
+		Health += delta; 
+
+		if (Health < 0) { Health = 0; }
+		if (Health > 100) { Health = 100; }
+
+		return true;
+	}
+
+	public bool UpdateEnergy(float delta)
+	{
+		if ((delta > 0 && Energy >= 100) || (delta < 0 && Energy <= 0)) 
+		{
+			return false;
+		}
+
+		Energy += delta; 
+
+		if (Energy < 0) { Energy = 0; }
+		if (Energy > 100) { Energy = 100; }
+
+		return true;
+	}
+
+	void Update () 
+	{
+		EnergyRegen ();
+	}
+
+	void EnergyRegen()
+	{
+		Energy += Time.deltaTime * EnergyRegenRate;
+		if (Energy > 100) { Energy = 100; }
 	}
 }

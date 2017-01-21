@@ -14,7 +14,6 @@ public class GunControl : MonoBehaviour
 	{
 		if (Input.GetButtonDown ("Fire1") /* && currentWeapon.Fire()*/) 
 		{
-			m_Anim.SetBool ("Fire",true);
 			IsFiring = true;
 		}
 		if (IsFiring && Input.GetButtonUp ("Fire1")) 
@@ -26,7 +25,8 @@ public class GunControl : MonoBehaviour
 
 	IEnumerator TriggerFireAnimation()
 	{
-		float triggerTime = Time.timeSinceLevelLoad + fireStartDelay;
+		yield return new WaitForSeconds (fireStartDelay);
+		m_Anim.SetBool ("Fire",true);
 		yield break;
 	}
 }
