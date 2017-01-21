@@ -95,7 +95,7 @@ public class waveScript : MonoBehaviour {
         if(createTimer <= 0)
         {
             recreate = false;
-            //canMove = true;
+            canMove = true;
         }
     }
 
@@ -289,6 +289,9 @@ public class waveScript : MonoBehaviour {
 
             transform.position = oldpos;
             transform.right = nor;
+            lineRenderer.numPositions = 0;
+
+            offset = 0;
             //Destroy(gameObject);
 
         }
