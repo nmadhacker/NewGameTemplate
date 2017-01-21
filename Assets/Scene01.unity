@@ -600,6 +600,7 @@ MonoBehaviour:
   - {fileID: 4150716359501316, guid: ae2e25d1a9e81174c85a4314f0e64839, type: 2}
   - {fileID: 4150716359501316, guid: 15eaee07e16f5dd439cdfd0b0403ad2f, type: 2}
   currentWave: {fileID: 0}
+  waveLifeTime: 4
   spawnLocation: {fileID: 676562816}
 --- !u!114 &528063554
 MonoBehaviour:
@@ -1539,6 +1540,10 @@ Prefab:
     - target: {fileID: 114072325332770592, guid: 5e6f5412ac75e4f5f8c4cb84d19c0641,
         type: 2}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031750846595118, guid: 5e6f5412ac75e4f5f8c4cb84d19c0641, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
 	void Start () {
 		facingRight = true;
 		myRigibody = GetComponent<Rigidbody2D>();
-		myAnimators = GetComponents<Animator>();
+		myAnimators = GetComponentsInChildren<Animator>();
 	}
 
 	void Update(){
@@ -68,6 +68,14 @@ public class Player : MonoBehaviour {
 		{
 			
 		}
+
+        if (!isGrounded)
+        {
+            foreach(Animator a in myAnimators)
+            {
+                a.SetFloat("vSpeed", myRigibody.velocity.y);
+            }
+        }
 	}
 
 	void FixedUpdate () {
@@ -84,8 +92,15 @@ public class Player : MonoBehaviour {
 		//myRigibody.velocity = Vector2.left; // x - 1; y - 0;
 		if(myRigibody.velocity.y < 0){
 
+
+
 			foreach (Animator a in myAnimators)
-				a.SetBool ("land",true);
+            {
+                a.SetBool("land", true);
+                a.SetFloat("vSpeed", myRigibody.velocity.y);
+            }
+				
+                
 		}
 		if(!this.myAnimators[0].GetBool("slide") && !this.myAnimators[0].GetCurrentAnimatorStateInfo(0).IsTag("Attack") && (isGrounded || airControl)){
 			myRigibody.velocity = new Vector2(horizontal*movementSpeed,myRigibody.velocity.y);	
@@ -162,15 +177,16 @@ public class Player : MonoBehaviour {
 	}
 
 	private bool IsGrounded(){
-		if (myRigibody.velocity.y <= 0.1) {
+		if (myRigibody.velocity.y <= 0) {
 			foreach (Transform point in groundPoints) {
 				Collider2D[] colliders = Physics2D.OverlapCircleAll(point.position, groundRadius, whatIsGround);
 				foreach(Collider2D collider in colliders){
 					if (collider.gameObject != gameObject) {
 
 						foreach (Animator a in myAnimators) {
-							a.ResetTrigger ("jump");
+							//a.ResetTrigger ("jump");
 							a.SetBool ("land",false);
+                            a.SetFloat("vSpeed", myRigibody.velocity.y);
 						}
 
 						return true;
@@ -184,7 +200,11 @@ public class Player : MonoBehaviour {
 	private void HandlerLayers(){
 		if (!isGrounded) {
 			foreach (Animator a in myAnimators)
-				a.SetLayerWeight (1, 1);
+            {
+                a.SetLayerWeight(1, 1);
+                a.SetFloat("vSpeed", myRigibody.velocity.y);
+            }
+				
 		} else {
 			foreach (Animator a in myAnimators)
 				a.SetLayerWeight (1,0);
