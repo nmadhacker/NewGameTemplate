@@ -7,6 +7,7 @@ public class CharacterStats : DisposableSingleton<CharacterStats>
 	[Range(0,100)]  public float Health;
 	[Range(0,100)] public float Energy;
 	[Range(0.1f,100f)] public float EnergyRegenRate;
+	[SerializeField] GunControl gun;
 
 	public bool UpdateHealth(float delta)
 	{
@@ -40,7 +41,7 @@ public class CharacterStats : DisposableSingleton<CharacterStats>
 
 	void Update () 
 	{
-		if (!GunControl.Instance.IsFiring && Energy < 100) {
+		if (!gun.IsFiring && Energy < 100) {
 			EnergyRegen ();
 		}
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunControl : DisposableSingleton<GunControl> 
+public class GunControl : MonoBehaviour
 {
 	public BaseWeapon currentWeapon;
 	[SerializeField] Animator m_Anim;
