@@ -7,36 +7,33 @@ public class CanvasScript : MonoBehaviour {
 
 	public int hp = 20;
 	public int we = 10;
-	Text hpBar;
-	Text weBar;
+	private Text hpText;
+	private Text weText;
+	[SerializeField] private Slider hpSlider;
+	[SerializeField] private Slider weSlider;
 
 	void Awake () {
-		hpBar = gameObject.GetComponent<Text> ();
-		weBar = gameObject.GetComponent<Text> ();
+		hpText = gameObject.GetComponent<Text> ();
+		weText = gameObject.GetComponent<Text> ();
+		hpSlider.value = 10;
+		weSlider.value = 100;
 	}
 
 	// Use this for initialization
 	void Start () {
-		hpBar.text = "";
-		weBar.text = "";
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		for (int i = 0; i <= hp; i++) {
-			hpBar.text += "|";
-		}
-		for (int j = 0; j <= we; j++) {
-			weBar.text += "|";
-		}
-
 		if (Input.GetKey (KeyCode.B)) {
-			hp--;
+			hpSlider.value -= 1;
 			Debug.Log ("Recibe daño");
 		}
 
 		if (Input.GetKey (KeyCode.N)) {
 			we--;
+			weSlider.value -= 25;
 			Debug.Log ("Lanza una onda");
 		}
 	}
