@@ -110,7 +110,7 @@ public class waveScript : MonoBehaviour {
             else
             {
                 
-                pos = new Vector3( ( ( (i+offset) / res ) * wWidth) , Mathf.Cos((i+offset)/ res) * wLength, 0);
+				pos = new Vector3( ( ( (i+offset) / res ) * wWidth) , Mathf.Sin((i+offset)/ res) * wLength, 0);
 
                 //print(pos);
                 lineRenderer.SetPosition(i, pos);
@@ -154,7 +154,7 @@ public class waveScript : MonoBehaviour {
         int npos = lineRenderer.numPositions;
         for (int i = 0; i < npos; i++)
         {
-            pos = new Vector3((i/res)*wWidth, Mathf.Cos(i/res) *wLength, 0);
+			pos = new Vector3((i/res)*wWidth, Mathf.Sin(i/res) *wLength, 0);
 
             lineRenderer.SetPosition(i, pos);
         }

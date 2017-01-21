@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 61759460041954956}
   - component: {fileID: 114523111090903874}
   - component: {fileID: 114256136287173860}
-  - component: {fileID: 114588293193454064}
+  - component: {fileID: 114175972028276486}
   m_Layer: 0
   m_Name: CharacterRobotBoy2.0
   m_TagString: Player
@@ -66,6 +66,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1983747638900244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4238302580622838}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4142239462908726
 Transform:
   m_ObjectHideFlags: 1
@@ -73,13 +88,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369135652316770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.268, y: 8.99, z: 0}
+  m_LocalPosition: {x: 6.2, y: 4.7, z: 0}
   m_LocalScale: {x: 1.7715329, y: 1.7715304, z: 1}
   m_Children:
   - {fileID: 4631260588928442}
   - {fileID: 4437140809699560}
+  - {fileID: 4238302580622838}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4238302580622838
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983747638900244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.211, y: 0.207, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4142239462908726}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4437140809699560
 Transform:
@@ -172,6 +201,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114175972028276486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1369135652316770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d85b3ef190fb3a428f441d67c6f3890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyCost: 13
+  minFireTime: 1
+  cooldown: 2.5
+  platform: {fileID: 4150716359501316, guid: 6ef40a936fe5acd44ac8e3a0b66ac598, type: 2}
+  spawnLocation: {fileID: 4238302580622838}
 --- !u!114 &114237616841650808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,25 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f7a9937602849fa9a5aa174e12ca24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 0}
+  currentWeapon: {fileID: 114175972028276486}
   m_Anim: {fileID: 95146035487267570}
   fireStartDelay: 0
---- !u!114 &114588293193454064
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1369135652316770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 4142239462908726}
-  damping: 1
-  lookAheadFactor: 3
-  lookAheadReturnSpeed: 0.5
-  lookAheadMoveThreshold: 0.1
 --- !u!114 &114643361476082160
 MonoBehaviour:
   m_ObjectHideFlags: 1
