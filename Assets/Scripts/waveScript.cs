@@ -30,6 +30,8 @@ public class waveScript : MonoBehaviour {
     Vector3 nor;
     Vector3 oldpos;
 
+    int oldSize;
+
     Collider2D justHit;
 
     bool recreate;
@@ -81,7 +83,7 @@ public class waveScript : MonoBehaviour {
         {
             createUpdate();
 
-            createTimer -= Time.deltaTime;
+            //createTimer -= Time.deltaTime;
         }
         if(createTimer <= 0)
         {
@@ -103,7 +105,20 @@ public class waveScript : MonoBehaviour {
             shootTimer -= shootSpeed / res;
             GenerateRoundWave();
             generateCollider();
+
+            if (recreate)
+            {
+                oldSize--;
+                if(oldSize <= 0)
+                {
+                    recreate = false;
+                    canMove = true;
+
+                }
+            }
         }
+
+
 
     }
 
@@ -308,6 +323,7 @@ public class waveScript : MonoBehaviour {
 
             //transform.right = nor;
 
+            oldSize = lineRenderer.numPositions;
             justHit = collision.collider;
         }
     }
