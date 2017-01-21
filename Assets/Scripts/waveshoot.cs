@@ -16,6 +16,7 @@ public class waveshoot : BaseWeapon {
 	{
 		base.StartAnimation ();
 		instWave = Instantiate(platform, spawnLocation.position, Quaternion.identity);
+        instWave.GetComponent<waveScript>().faceRight = GetComponent<Player>().facingRight;
 		createTrailCoroutine = StartCoroutine (CreateTrailCoroutine ());
 	}
 

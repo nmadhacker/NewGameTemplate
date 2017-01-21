@@ -23,10 +23,28 @@ public class waveScript : MonoBehaviour {
     bool deleting = false;
 
     int offset;
-    
 
-	void Start () {
+
+
+    public bool faceRight = true;
+
+
+
+
+    Vector3 nor;
+    Vector3 oldpos;
+
+    Collider2D justHit;
+
+    bool recreate;
+    float createTimer = 2f;
+
+    void Awake()
+    {
         lineRenderer = GetComponent<LineRenderer>();
+    }
+	void Start () {
+        
 
         //lineRenderer.numPositions = (int)(size * res);
 
@@ -67,6 +85,18 @@ public class waveScript : MonoBehaviour {
             }
         }
 
+
+        if (recreate)
+        {
+            createUpdate();
+
+            createTimer -= Time.deltaTime;
+        }
+        if(createTimer <= 0)
+        {
+            recreate = false;
+            //canMove = true;
+        }
     }
 
     public void createUpdate()
@@ -112,6 +142,11 @@ public class waveScript : MonoBehaviour {
                 
 				pos = new Vector3( ( ( (i+offset) / res ) * wWidth) , Mathf.Sin((i+offset)/ res) * wLength, 0);
 
+                if (!faceRight)
+                {
+                    pos = new Vector3((((i + offset) / res) * -wWidth), Mathf.Sin((i + offset) / res) * wLength, 0);
+                }
+
                 //print(pos);
                 lineRenderer.SetPosition(i, pos);
             }
@@ -155,6 +190,11 @@ public class waveScript : MonoBehaviour {
         for (int i = 0; i < npos; i++)
         {
 			pos = new Vector3((i/res)*wWidth, Mathf.Sin(i/res) *wLength, 0);
+
+            if (!faceRight)
+            {
+                pos = new Vector3((-i / res) * wWidth, Mathf.Sin(i / res) * wLength, 0);
+            }
 
             lineRenderer.SetPosition(i, pos);
         }
@@ -243,7 +283,14 @@ public class waveScript : MonoBehaviour {
 
         if(npos-1 == 0)
         {
-            Destroy(gameObject);
+            deleting = false;
+
+            recreate = true;
+
+            transform.position = oldpos;
+            transform.right = nor;
+            //Destroy(gameObject);
+
         }
     }
 
@@ -251,10 +298,22 @@ public class waveScript : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {
         print("wavehit");
-        if(collision.collider.tag != "Player")
+        if(collision.collider.tag != "Player" && collision.collider != justHit)
         {
             canMove = false;
             deleting = true;
+
+
+            oldpos = transform.position + lineRenderer.GetPosition(lineRenderer.numPositions-1);
+
+           
+
+            //pos = collision.contacts[0].;
+            nor = collision.contacts[0].normal;
+
+            //transform.right = nor;
+
+            justHit = collision.collider;
         }
     }
 }

@@ -61,7 +61,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!68 &68945584468283226
 EdgeCollider2D:
@@ -93,7 +93,8 @@ MonoBehaviour:
   wLength: 0.5
   wWidth: 0.5
   res: 4
-  shootSpeed: 0.2
+  shootSpeed: 0.08
+  faceRight: 1
 --- !u!120 &120885574409431916
 LineRenderer:
   m_ObjectHideFlags: 1
