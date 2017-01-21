@@ -9,8 +9,9 @@ public class waveshoot : BaseWeapon {
 //	}
 
 	public Transform[] wave;
-	[SerializeField] public Transform currentWave;
+	[SerializeField] private Transform currentWave;
 	private int waveType;
+	[SerializeField] private float waveLifeTime = 4.0f;
     public Transform spawnLocation;
 
     Transform instWave;
@@ -61,5 +62,13 @@ public class waveshoot : BaseWeapon {
 			waveType = 2;
 		}
 		currentWave = wave[waveType];
+	}
+
+	void countDownWave ()
+	{
+		waveLifeTime -= Time.deltaTime;
+		if (waveLifeTime <= 0) {
+			Destroy (this.gameObject);
+		}
 	}
 }
