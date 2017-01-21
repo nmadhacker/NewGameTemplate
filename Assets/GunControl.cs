@@ -12,7 +12,7 @@ public class GunControl : MonoBehaviour
 
 	public void Update()
 	{
-		if (Input.GetButtonDown ("Fire1") /* && currentWeapon.Fire()*/) 
+		if (Input.GetButtonDown ("Fire1") && currentWeapon.Fire()) 
 		{
 			IsFiring = true;
 		}
@@ -20,6 +20,7 @@ public class GunControl : MonoBehaviour
 		{
 			m_Anim.SetBool ("Fire", false);
 			IsFiring = false;
+			currentWeapon.Stop ();
 		}
 	}
 

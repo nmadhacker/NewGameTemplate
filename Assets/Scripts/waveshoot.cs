@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class waveshoot : MonoBehaviour {
+public class waveshoot : BaseWeapon {
 
     public Transform platform;
 
@@ -10,27 +10,28 @@ public class waveshoot : MonoBehaviour {
 
     Transform instWave;
 
+	Coroutine createTrailCoroutine;
 
-	// Use this for initialization
-	void Start () {
-		
+	protected override void StartAnimation ()
+	{
+		base.StartAnimation ();
+		instWave = Instantiate(platform, spawnLocation.position, Quaternion.identity);
+		createTrailCoroutine = StartCoroutine (CreateTrailCoroutine ());
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            instWave = Instantiate(platform, spawnLocation.position, Quaternion.identity);
-        }
-        if (Input.GetKey(KeyCode.Z))
-        {
-            instWave.GetComponent<waveScript>().createUpdate();
-        }
-        if (Input.GetKeyUp(KeyCode.Z))
-        {
-            instWave.GetComponent<waveScript>().startMove();
-        }
-		
+	IEnumerator CreateTrailCoroutine()
+	{
+		while (true) 
+		{
+			instWave.GetComponent<waveScript>().createUpdate();
+			yield return null;
+		}
+	}
+
+	protected override void StopAnimation ()
+	{
+		base.StopAnimation ();
+		StopCoroutine (createTrailCoroutine);
+		instWave.GetComponent<waveScript>().startMove();
 	}
 }
