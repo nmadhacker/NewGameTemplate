@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="118">
+	<RootPaths>
+		<ProjectRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/GameJamWwise/GameJamWwise2017/</ProjectRoot>
+		<SourceFilesRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/GameJamWwise/GameJamWwise2017/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/GameJamWwise/GameJamWwise2017/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/GameJamWwise/GameJamWwise2017/GeneratedSoundBanks/Mac/</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1141041718" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\InitialSoundBank</ObjectPath>
+			<ShortName>InitialSoundBank</ShortName>
+			<Path>InitialSoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1569917193" Name="PlayEnemyAttack" ObjectPath="\Events\Default Work Unit\SFX\III) NPC\PlayEnemyAttack"/>
+				<Event Id="3657943006" Name="PlayEnemyMove" ObjectPath="\Events\Default Work Unit\SFX\III) NPC\PlayEnemyMove"/>
+				<Event Id="4219422371" Name="PlayHeroAttack" ObjectPath="\Events\Default Work Unit\SFX\II) PERSONAJE\PlayHeroAttack"/>
+				<Event Id="531536441" Name="PlayHeroDead" ObjectPath="\Events\Default Work Unit\SFX\II) PERSONAJE\PlayHeroDead"/>
+				<Event Id="2634239171" Name="PlayHeroJump" ObjectPath="\Events\Default Work Unit\SFX\II) PERSONAJE\PlayHeroJump"/>
+				<Event Id="2325113902" Name="PlayHeroOnFloor" ObjectPath="\Events\Default Work Unit\SFX\II) PERSONAJE\PlayHeroOnFloor"/>
+				<Event Id="4233978862" Name="PlayStartMusic" ObjectPath="\Events\Default Work Unit\MUSIC\PlayStartMusic"/>
+				<Event Id="3518592636" Name="StopEnemyMove" ObjectPath="\Events\Default Work Unit\SFX\III) NPC\StopEnemyMove"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="14127979" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente 1-Group.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente 1-Group_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="46241447" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente 2-Massive.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente 2-Massive_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="48919602" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente 5-Pianoteq 5 STAGE.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente 5-Pianoteq 5 STAGE_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="66856314" Language="SFX">
+					<ShortName>Dark Ambience.wav</ShortName>
+					<Path>SFX/Dark Ambience_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="158605724" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente 6-Kontakt 5.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente 6-Kontakt 5_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="207050163" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente 3-Xpand!2_x64.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente 3-Xpand!2_x64_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="216659824" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente Stars.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente Stars_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="242300940" Language="SFX">
+					<ShortName>Movement Exp 03.wav</ShortName>
+					<Path>SFX/Movement Exp 03_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="416726130" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente A-ValhallaVintageVerb.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente A-ValhallaVintageVerb_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="423373940" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente B-Delay.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente B-Delay_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="528041245" Language="SFX">
+					<ShortName>EnemyRoar02.wav</ShortName>
+					<Path>SFX/EnemyRoar02_9E69E797.wem</Path>
+				</File>
+				<File Id="604402754" Language="SFX">
+					<ShortName>EnemyAttack01.wav</ShortName>
+					<Path>SFX/EnemyAttack01_9E69E797.wem</Path>
+				</File>
+				<File Id="612827574" Language="SFX">
+					<ShortName>EnemyRoar01.wav</ShortName>
+					<Path>SFX/EnemyRoar01_9E69E797.wem</Path>
+				</File>
+				<File Id="619761784" Language="SFX">
+					<ShortName>Movement Looped.wav</ShortName>
+					<Path>SFX/Movement Looped_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="620578079" Language="SFX">
+					<ShortName>Movement Exp 01.wav</ShortName>
+					<Path>SFX/Movement Exp 01_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="648275268" Language="SFX">
+					<ShortName>Personaje_salto.wav</ShortName>
+					<Path>SFX/Personaje_salto_9E69E797.wem</Path>
+				</File>
+				<File Id="706220918" Language="SFX">
+					<ShortName>GGJ_4 capas removiéndose lentamente 7-Kontakt 5.wav</ShortName>
+					<Path>SFX/GGJ_4 capas removiéndose lentamente 7-Kontakt 5_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="733869413" Language="SFX">
+					<ShortName>Personaje_magia.wav</ShortName>
+					<Path>SFX/Personaje_magia_9E69E797.wem</Path>
+				</File>
+				<File Id="768593105" Language="SFX">
+					<ShortName>EnemyRoar03.wav</ShortName>
+					<Path>SFX/EnemyRoar03_9E69E797.wem</Path>
+				</File>
+				<File Id="794270462" Language="SFX">
+					<ShortName>EnemyAttack02.wav</ShortName>
+					<Path>SFX/EnemyAttack02_9E69E797.wem</Path>
+				</File>
+				<File Id="849212661" Language="SFX">
+					<ShortName>Personaje_Caída salto.wav</ShortName>
+					<Path>SFX/Personaje_Caída salto_9E69E797.wem</Path>
+				</File>
+				<File Id="899160637" Language="SFX">
+					<ShortName>Personaje_muerte.wav</ShortName>
+					<Path>SFX/Personaje_muerte_9E69E797.wem</Path>
+				</File>
+				<File Id="977369975" Language="SFX">
+					<ShortName>Movement Exp 02.wav</ShortName>
+					<Path>SFX/Movement Exp 02_4B8CC0C5.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
