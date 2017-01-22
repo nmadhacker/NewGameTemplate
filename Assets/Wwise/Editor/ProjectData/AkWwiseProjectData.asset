@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{5A84E74E-9458-4C16-BF3B-FF4BBAE5D3DA}'
-    m_lastTimePsrt1: 1904398592
-    m_lastTimePart2: -1999355150
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
     List:
     - Name: PlayEnemyAttack
       Path: Default Work Unit/SFX/III) NPC/PlayEnemyAttack
@@ -133,15 +133,15 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{3D2E5DB9-2B5F-4D88-B5B0-BC4D45CA5C50}'
-    m_lastTimePsrt1: 833417472
-    m_lastTimePart2: -1999355180
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
     List: []
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{A5B1206F-ECA7-4CBA-95BA-5F03ED21849E}'
-    m_lastTimePsrt1: 1904398592
-    m_lastTimePart2: -1999355150
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
     List:
     - Name: Checkpoints
       Path: Default Work Unit/Checkpoints
@@ -201,8 +201,8 @@ MonoBehaviour:
   - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D9FA5662-B4F9-4771-9B70-D1601E187044}'
-    m_lastTimePsrt1: 843417472
-    m_lastTimePart2: -1999355180
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
     List:
     - Name: Activar
       Path: Default Work Unit/Activar
@@ -237,8 +237,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{6B71B070-2791-4B2B-8C30-BB4666E00B8E}'
-    m_lastTimePsrt1: -975601408
-    m_lastTimePart2: -1999355151
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
     List:
     - Name: InitialSoundBank
       Path: Default Work Unit/InitialSoundBank
@@ -251,6 +251,9 @@ MonoBehaviour:
       Guid: e5d1bc323865154f8fca449eb2e1cd55
   ExpandedItems:
   - /DOGE
+  - /DOGE/States
+  - /DOGE/States/Default Work Unit
+  - /DOGE/States/Default Work Unit/Checkpoints
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

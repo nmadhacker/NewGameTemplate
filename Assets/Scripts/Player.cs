@@ -92,8 +92,6 @@ public class Player : MonoBehaviour {
 		//myRigibody.velocity = Vector2.left; // x - 1; y - 0;
 		if(myRigibody.velocity.y < 0){
 
-
-			AkSoundEngine.PostEvent ("PlayHeroOnFloor", this.gameObject);
 			foreach (Animator a in myAnimators)
             {
                 a.SetBool("land", true);
