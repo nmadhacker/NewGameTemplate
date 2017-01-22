@@ -15,13 +15,16 @@ public class ExecuteOnContact : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if (IsValid(gameObject)) 
+		if (IsValid(collider.gameObject)) 
 		{
 			eventToTrigger.Invoke ();
 
-			print ("triggerExe");
-		}
-	}
+            print("Success");
+
+        }
+
+        print("triggerExe");
+    }
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{

@@ -5,7 +5,7 @@ public class waveScript : MonoBehaviour {
 
 	public int Points {get { return lineRenderer.numPositions; } }
 
-	LineRenderer lineRenderer;
+	public LineRenderer lineRenderer;
 
     public int size;
 
@@ -36,7 +36,7 @@ public class waveScript : MonoBehaviour {
 
     Collider2D justHit;
 
-    bool recreate;
+    bool recreate = false;
     float createTimer = 2f;
 
     void Awake()
@@ -192,8 +192,11 @@ public class waveScript : MonoBehaviour {
         edgeCollider.points = positions2;
     }
 
-    void GenerateRoundWave()
+    public  void GenerateRoundWave()
     {
+
+        //lineRenderer.numPositions = (int)(size * res);
+
         Vector3 pos;
         int npos = lineRenderer.numPositions;
         for (int i = 0; i < npos; i++)
@@ -290,15 +293,28 @@ public class waveScript : MonoBehaviour {
 
         lineRenderer.numPositions = npos - 1;
 
+        generateCollider();
         if(npos-1 == 0)
         {
             deleting = false;
 
             recreate = true;
 
+            lineRenderer.numPositions = 0;
+            //generateCollider();
+            EdgeCollider2D edgeCollider = GetComponent<EdgeCollider2D>();
+            
+            Vector2[] p = new Vector2[2];
+            p[0] = Vector2.zero;
+            p[1] = Vector2.zero;
+            edgeCollider.points = p;
+
+
             transform.position = oldpos;
             transform.right = nor;
-            lineRenderer.numPositions = 0;
+
+
+            
 
             if (!faceRight)
             {
@@ -314,14 +330,16 @@ public class waveScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //print("wavehit");
+        
         if(collision.collider.tag != "Player" && collision.collider != justHit)
         {
+            print("wavehit");
+
             canMove = false;
             deleting = true;
 
 
-            oldpos = transform.position + lineRenderer.GetPosition(lineRenderer.numPositions-1);
+            oldpos = collision.contacts[0].point;//transform.position + lineRenderer.GetPosition(lineRenderer.numPositions-1);
 
            
 

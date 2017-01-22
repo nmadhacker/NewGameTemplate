@@ -269,7 +269,9 @@ public class Player : MonoBehaviour {
 			invTimer = 1f;
             StartCoroutine(flicker());
 
-            Destroy (playerHP.GetChild (0).gameObject);
+            playerHP.GetComponent<HealthDisplay>().updatehealth((int)HP*5);
+
+            //Destroy (playerHP.GetChild (0).gameObject);
 		}
 
 		if (HP <= 0) 
