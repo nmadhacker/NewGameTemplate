@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ExecuteOnContact : MonoBehaviour 
 {
-	[SerializeField] protected UnityEvent eventToTrigger;
+	[SerializeField] UnityEvent eventToTrigger;
 	[SerializeField] string tagtoCheck;
 
 	protected virtual bool IsValid(GameObject obj)

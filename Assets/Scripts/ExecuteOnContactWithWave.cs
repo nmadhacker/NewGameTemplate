@@ -16,8 +16,8 @@ public class ExecuteOnContactWithWave : ExecuteOnContact
 		var waveScript = obj.GetComponentInChildren<waveScript> ();
 		if (waveScript == null || waveScript.Points < expectedPoints) 
 		{
-			return;
+			return false;
 		}
-		eventToTrigger.Invoke ();
+		return true;
 	}
 }
