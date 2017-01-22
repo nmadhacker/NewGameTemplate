@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: df4f57179828248deb85dc57667e2ab4
-timeCreated: 1485028690
+guid: 58f912019ef951244b01e56254762813
+timeCreated: 1485061883
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -58,19 +58,11 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
-    maxTextureSize: 1024
-    textureFormat: 12
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 1
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
-  spritePackingTag: CharaLaizaBody
+  spritePackingTag: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 

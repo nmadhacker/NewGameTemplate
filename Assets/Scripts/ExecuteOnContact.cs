@@ -18,6 +18,8 @@ public class ExecuteOnContact : MonoBehaviour
 		if (IsValid(gameObject)) 
 		{
 			eventToTrigger.Invoke ();
+
+			print ("triggerExe");
 		}
 	}
 
