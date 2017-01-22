@@ -37,15 +37,13 @@ public class GunControl : MonoBehaviour
 	{
 		yield return new WaitForSeconds (fireStartDelay);
 		m_Anim.SetBool ("Fire",true);
+		AkSoundEngine.PostEvent ("PlayHeroAttack",this.gameObject);
 		yield break;
 	}
 
 	private void waveTypeSelector() {
-		if (Input.GetKeyDown (KeyCode.Q)) {
+		if (Input.GetKeyDown (KeyCode.LeftAlt)) {
 			currentWeapon.nextWave ();
-		}
-		if (Input.GetKeyDown (KeyCode.E)) {
-			currentWeapon.previousWave ();
 		}
 	}
 }

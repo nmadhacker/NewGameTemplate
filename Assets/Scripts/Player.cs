@@ -93,7 +93,7 @@ public class Player : MonoBehaviour {
 		if(myRigibody.velocity.y < 0){
 
 
-
+			AkSoundEngine.PostEvent ("PlayHeroOnFloor", this.gameObject);
 			foreach (Animator a in myAnimators)
             {
                 a.SetBool("land", true);
@@ -108,6 +108,7 @@ public class Player : MonoBehaviour {
 		if (isGrounded && jump) {
 			isGrounded = false;
 			myRigibody.AddForce(new Vector2(0,jumpForce));
+			AkSoundEngine.PostEvent ("PlayHeroJump", this.gameObject);
 			foreach (Animator a in myAnimators)
 				a.SetTrigger ("jump");
 		}
