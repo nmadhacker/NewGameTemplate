@@ -9,5 +9,9 @@ namespace SceneTransitions {
 		LoadingScene,
 		Scene00,
 		Scene01,
+		GGJ_Credit,
+		Wadow,
+		DogameStudio,
+		crashScene
 	}
 }
