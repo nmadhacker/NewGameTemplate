@@ -1,0 +1,35 @@
+Event	ID	Name			Wwise Object Path	Notes
+	531536441	PlayHeroDead			\Default Work Unit\SFX\II) PERSONAJE\PlayHeroDead	
+	1569917193	PlayEnemyAttack			\Default Work Unit\SFX\III) NPC\PlayEnemyAttack	
+	2325113902	PlayHeroOnFloor			\Default Work Unit\SFX\II) PERSONAJE\PlayHeroOnFloor	
+	2634239171	PlayHeroJump			\Default Work Unit\SFX\II) PERSONAJE\PlayHeroJump	
+	3518592636	StopEnemyMove			\Default Work Unit\SFX\III) NPC\StopEnemyMove	
+	3657943006	PlayEnemyMove			\Default Work Unit\SFX\III) NPC\PlayEnemyMove	
+	4219422371	PlayHeroAttack			\Default Work Unit\SFX\II) PERSONAJE\PlayHeroAttack	
+	4233978862	PlayStartMusic			\Default Work Unit\MUSIC\PlayStartMusic	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	14127979	GGJ_4 capas removiéndose lentamente 1-Group	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente 1-Group_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente 1-Group		373520
+	46241447	GGJ_4 capas removiéndose lentamente 2-Massive	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente 2-Massive_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente 2-Massive		369943
+	48919602	GGJ_4 capas removiéndose lentamente 5-Pianoteq 5 STAGE	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente 5-Pianoteq 5 STAGE_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente 5-Pianoteq 5 STAGE		476279
+	66856314	Dark Ambience	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Dark Ambience_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageDarkAmbience\DarkAmbience\Dark Ambience		157895
+	158605724	GGJ_4 capas removiéndose lentamente 6-Kontakt 5	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente 6-Kontakt 5_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente 6-Kontakt 5		533176
+	207050163	GGJ_4 capas removiéndose lentamente 3-Xpand!2_x64	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente 3-Xpand!2_x64_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente 3-Xpand!2_x64		303933
+	216659824	GGJ_4 capas removiéndose lentamente Stars	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente Stars_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente Stars		126027
+	242300940	New Music Track_01	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Movement Exp 03_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\EnemyMovement\New Music Segment\New Music Track_01		14161
+	416726130	GGJ_4 capas removiéndose lentamente A-ValhallaVintageVerb	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente A-ValhallaVintageVerb_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente A-ValhallaVintageVerb		510990
+	423373940	GGJ_4 capas removiéndose lentamente B-Delay	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente B-Delay_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente B-Delay		440258
+	528041245	EnemyRoar02	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\EnemyRoar02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\III) NPC\Enemy01\Attack\Roar\EnemyRoar02		13255
+	604402754	EnemyAttack01	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\EnemyAttack01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\III) NPC\Enemy01\Attack\Slash\EnemyAttack01		12712
+	612827574	EnemyRoar01	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\EnemyRoar01_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\III) NPC\Enemy01\Attack\Roar\EnemyRoar01		14437
+	619761784	New Music Track	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Movement Looped_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\EnemyMovement\New Music Segment\New Music Track		64164
+	620578079	New Music Track_01	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Movement Exp 01_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\EnemyMovement\New Music Segment\New Music Track_01		13950
+	648275268	Personaje_salto	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Personaje_salto_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\II) PERSONAJE\Personaje_salto		3636
+	706220918	GGJ_4 capas removiéndose lentamente 7-Kontakt 5	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\GGJ_4 capas removiéndose lentamente 7-Kontakt 5_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\StageMusic\1_Checkpoint\A\GGJ_4 capas removiéndose lentamente 7-Kontakt 5		100416
+	733869413	Attack	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Personaje_magia_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\II) PERSONAJE\Attack		20473
+	768593105	EnemyRoar03	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\EnemyRoar03_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\III) NPC\Enemy01\Attack\Roar\EnemyRoar03		14714
+	794270462	EnemyAttack02	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\EnemyAttack02_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\III) NPC\Enemy01\Attack\Slash\EnemyAttack02		11371
+	849212661	Personaje_Caída salto	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Personaje_Caída salto_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\II) PERSONAJE\Personaje_Caída salto		3495
+	899160637	Personaje_muerte	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Personaje_muerte_50DB02DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX\II) PERSONAJE\Personaje_muerte		47652
+	977369975	New Music Track_01	Y:\Documents\GameJamWwise\GameJamWwise2017\.cache\Mac\SFX\Movement Exp 02_0CDD8189.wem		\Interactive Music Hierarchy\Default Work Unit\EnemyMovement\New Music Segment\New Music Track_01		27644
+

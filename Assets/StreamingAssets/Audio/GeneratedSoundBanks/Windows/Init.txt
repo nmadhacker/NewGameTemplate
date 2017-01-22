@@ -1,0 +1,20 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	225972798	Checkpoints			\Default Work Unit\Checkpoints	
+	1229948536	Environment			\Default Work Unit\Environment	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Checkpoints			
+	1174696546	Checkpoint_4	Checkpoints			
+	1174696548	Checkpoint_2	Checkpoints			
+	1174696549	Checkpoint_3	Checkpoints			
+	1174696551	Checkpoint_1	Checkpoints			
+	445007725	Catacumbas	Environment			
+	748895195	None	Environment			
+	1048449607	Mar	Environment			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\MUSIC	
+

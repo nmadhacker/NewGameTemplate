@@ -15,39 +15,245 @@ MonoBehaviour:
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{CED36DE1-20DA-49F5-A1C4-07A96A6383C1}'
-    m_lastTimePsrt1: -2002338432
-    m_lastTimePart2: -1999355357
-    List: []
+    Guid: '{5A84E74E-9458-4C16-BF3B-FF4BBAE5D3DA}'
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
+    List:
+    - Name: PlayEnemyAttack
+      Path: Default Work Unit/SFX/III) NPC/PlayEnemyAttack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: III) NPC
+        ObjectType: 4
+      - ElementName: PlayEnemyAttack
+        ObjectType: 3
+      ID: 1569917193
+      Guid: 660b92f85bdf004a9840ccec5dd7412e
+      maxAttenuation: 0
+    - Name: PlayEnemyMove
+      Path: Default Work Unit/SFX/III) NPC/PlayEnemyMove
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: III) NPC
+        ObjectType: 4
+      - ElementName: PlayEnemyMove
+        ObjectType: 3
+      ID: -637024290
+      Guid: 3dd7a21fc41e0d49ac563447c16c2adb
+      maxAttenuation: 0
+    - Name: PlayHeroAttack
+      Path: Default Work Unit/SFX/II) PERSONAJE/PlayHeroAttack
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: II) PERSONAJE
+        ObjectType: 4
+      - ElementName: PlayHeroAttack
+        ObjectType: 3
+      ID: -75544925
+      Guid: 6b0d40f7a7a5bf40a412a2738e2d252d
+      maxAttenuation: 0
+    - Name: PlayHeroDead
+      Path: Default Work Unit/SFX/II) PERSONAJE/PlayHeroDead
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: II) PERSONAJE
+        ObjectType: 4
+      - ElementName: PlayHeroDead
+        ObjectType: 3
+      ID: 531536441
+      Guid: cc16769368b166449d94d28248f2c3fb
+      maxAttenuation: 0
+    - Name: PlayHeroJump
+      Path: Default Work Unit/SFX/II) PERSONAJE/PlayHeroJump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: II) PERSONAJE
+        ObjectType: 4
+      - ElementName: PlayHeroJump
+        ObjectType: 3
+      ID: -1660728125
+      Guid: 24267ec0d829354cb9e654e801b6ef71
+      maxAttenuation: 0
+    - Name: PlayHeroOnFloor
+      Path: Default Work Unit/SFX/II) PERSONAJE/PlayHeroOnFloor
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: II) PERSONAJE
+        ObjectType: 4
+      - ElementName: PlayHeroOnFloor
+        ObjectType: 3
+      ID: -1969853394
+      Guid: 24c7361efafc7b4c929667cbd573c740
+      maxAttenuation: 0
+    - Name: PlayStartMusic
+      Path: Default Work Unit/MUSIC/PlayStartMusic
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUSIC
+        ObjectType: 4
+      - ElementName: PlayStartMusic
+        ObjectType: 3
+      ID: -60988434
+      Guid: 02df4a552e8b414eb361a142265f6412
+      maxAttenuation: 0
+    - Name: StopEnemyMove
+      Path: Default Work Unit/SFX/III) NPC/StopEnemyMove
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: III) NPC
+        ObjectType: 4
+      - ElementName: StopEnemyMove
+        ObjectType: 3
+      ID: -776374660
+      Guid: 52eb329f882f8c48b5039d7d0ebd8d64
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{7D3AB526-25C4-4085-BF86-1443C95AB3A9}'
-    m_lastTimePsrt1: -2002338432
-    m_lastTimePart2: -1999355357
+    Guid: '{3D2E5DB9-2B5F-4D88-B5B0-BC4D45CA5C50}'
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
     List: []
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{4922CBBF-DEC7-4574-AD7E-6BFAB1A03878}'
-    m_lastTimePsrt1: -2002338432
-    m_lastTimePart2: -1999355357
-    List: []
+    Guid: '{A5B1206F-ECA7-4CBA-95BA-5F03ED21849E}'
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
+    List:
+    - Name: Checkpoints
+      Path: Default Work Unit/Checkpoints
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Checkpoints
+        ObjectType: 9
+      ID: 225972798
+      Guid: d75cc6bd64098f4c8db4039b064504e8
+      values:
+      - Checkpoint_1
+      - Checkpoint_2
+      - Checkpoint_3
+      - None
+      ValueIcons:
+      - ElementName: Checkpoint_1
+        ObjectType: 8
+      - ElementName: Checkpoint_2
+        ObjectType: 8
+      - ElementName: Checkpoint_3
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: 677204466472044665720446db3ba32c
+      ValueGuids:
+      - bytes: c93062bce3e9d74f849bdbcd3c9c212b
+      - bytes: 8124e64af35f254da9a1420cd7b8e0e0
+      - bytes: 03ecdfe88225a044b614f1c97a485f16
+      - bytes: 4cb85281fdff274c9425278c11c80171
+    - Name: Environment
+      Path: Default Work Unit/Environment
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Environment
+        ObjectType: 9
+      ID: 1229948536
+      Guid: 8bc104723684134aaa04b91c1c47eb68
+      values:
+      - Catacumbas
+      - Mar
+      - None
+      ValueIcons:
+      - ElementName: Catacumbas
+        ObjectType: 8
+      - ElementName: Mar
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: 6d47861a47127e3edb3ba32c
+      ValueGuids:
+      - bytes: dc37b39ae536cc49917439826a020d81
+      - bytes: 5552465cb62ed1479fc91060b4a99c14
+      - bytes: 84a6e7f02421034ebd6a92a845817275
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{9D468252-D3B7-4A33-BA5A-D48E8EF9BC2B}'
-    m_lastTimePsrt1: -2002338432
-    m_lastTimePart2: -1999355357
-    List: []
+    Guid: '{D9FA5662-B4F9-4771-9B70-D1601E187044}'
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
+    List:
+    - Name: Activar
+      Path: Default Work Unit/Activar
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Activar
+        ObjectType: 11
+      ID: -209180769
+      Guid: 3733b9a8d6b56447b882b3b2f8a218a2
+      values:
+      - a
+      - b
+      - c
+      - d
+      ValueIcons:
+      - ElementName: a
+        ObjectType: 10
+      - ElementName: b
+        ObjectType: 10
+      - ElementName: c
+        ObjectType: 10
+      - ElementName: d
+        ObjectType: 10
+      valueIDs: 7e5d0c057d5d0c057c5d0c057b5d0c05
+      ValueGuids:
+      - bytes: a332ecd3b7df384693cfdad96b6b717e
+      - bytes: 3b52166a2b46734084a9a8fdc9075be6
+      - bytes: 09f5d50c7ee9564da0fb3954c9522ae9
+      - bytes: dc1d2dcb75762a4b930e44cef3f2c018
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
-    Guid: '{614050EE-B5EF-4AE4-8082-9CD1047856C2}'
-    m_lastTimePsrt1: -2002338432
-    m_lastTimePart2: -1999355357
-    List: []
-  ExpandedItems: []
+    Guid: '{6B71B070-2791-4B2B-8C30-BB4666E00B8E}'
+    m_lastTimePsrt1: -65274368
+    m_lastTimePart2: -1999355141
+    List:
+    - Name: InitialSoundBank
+      Path: Default Work Unit/InitialSoundBank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: InitialSoundBank
+        ObjectType: 7
+      ID: 1141041718
+      Guid: e5d1bc323865154f8fca449eb2e1cd55
+  ExpandedItems:
+  - /DOGE
+  - /DOGE/States
+  - /DOGE/States/Default Work Unit
+  - /DOGE/States/Default Work Unit/Checkpoints
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
