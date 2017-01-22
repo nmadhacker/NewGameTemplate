@@ -15,7 +15,7 @@ public class ExecuteOnContact : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if (IsValid(gameObject)) 
+		if (IsValid(collider.gameObject)) 
 		{
 			eventToTrigger.Invoke ();
 

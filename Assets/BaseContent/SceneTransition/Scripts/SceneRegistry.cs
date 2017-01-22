@@ -12,6 +12,7 @@ namespace SceneTransitions {
 		GGJ_Credit,
 		Wadow,
 		DogameStudio,
-		crashScene
+		crashScene,
+		EndingScene
 	}
 }
