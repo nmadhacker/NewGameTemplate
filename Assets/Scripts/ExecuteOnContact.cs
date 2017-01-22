@@ -8,9 +8,14 @@ public class ExecuteOnContact : MonoBehaviour
 	[SerializeField] UnityEvent eventToTrigger;
 	[SerializeField] string tagtoCheck;
 
+	protected virtual bool IsValid(GameObject obj)
+	{
+		return obj.tag.Equals (tagtoCheck);
+	}
+
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		if (collider.gameObject.tag.Equals (tagtoCheck)) 
+		if (IsValid(gameObject)) 
 		{
 			eventToTrigger.Invoke ();
             print("TRigger");
@@ -19,7 +24,7 @@ public class ExecuteOnContact : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == tagtoCheck) 
+		if (IsValid(collision.gameObject)) 
 		{
 			eventToTrigger.Invoke ();
 		}
