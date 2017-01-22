@@ -102,7 +102,7 @@ public class Player : MonoBehaviour {
 				
                 
 		}
-		if(!this.myAnimators[0].GetBool("slide") && !this.myAnimators[0].GetCurrentAnimatorStateInfo(0).IsTag("Attack") && (isGrounded || airControl)){
+		if(!this.myAnimators[0].GetBool("slide") && !this.myAnimators[0].GetCurrentAnimatorStateInfo(0).IsTag("Attack") && (isGrounded || airControl || !GetComponent<GunControl>().IsFiring)){
 			myRigibody.velocity = new Vector2(horizontal*movementSpeed,myRigibody.velocity.y);	
 		}
 		if (isGrounded && jump) {
@@ -177,7 +177,7 @@ public class Player : MonoBehaviour {
 	}
 
 	private bool IsGrounded(){
-		if (myRigibody.velocity.y <= 0) {
+		if (myRigibody.velocity.y < 0.1) {
 			foreach (Transform point in groundPoints) {
 				Collider2D[] colliders = Physics2D.OverlapCircleAll(point.position, groundRadius, whatIsGround);
 				foreach(Collider2D collider in colliders){
@@ -193,7 +193,29 @@ public class Player : MonoBehaviour {
 					}
 				}
 			}
-		}
+        }
+        else
+        {
+            foreach (Transform point in groundPoints)
+            {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(point.position, groundRadius, whatIsGround);
+                foreach (Collider2D collider in colliders)
+                {
+                    if (collider.gameObject != gameObject)
+                    {
+
+                        foreach (Animator a in myAnimators)
+                        {
+                            a.ResetTrigger ("jump");
+                            a.SetBool("land", false);
+                            a.SetFloat("vSpeed", myRigibody.velocity.y);
+                        }
+
+                        return true;
+                    }
+                }
+            }
+        }
 		return false;
 	}
 

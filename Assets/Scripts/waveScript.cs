@@ -298,6 +298,11 @@ public class waveScript : MonoBehaviour {
             transform.right = nor;
             lineRenderer.numPositions = 0;
 
+            if (!faceRight)
+            {
+                transform.right = -nor;
+            }
+
             offset = 0;
             //Destroy(gameObject);
 
@@ -307,7 +312,7 @@ public class waveScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("wavehit");
+        //print("wavehit");
         if(collision.collider.tag != "Player" && collision.collider != justHit)
         {
             canMove = false;

@@ -13,6 +13,7 @@ public class ExecuteOnContact : MonoBehaviour
 		if (collider.gameObject.tag.Equals (tagtoCheck)) 
 		{
 			eventToTrigger.Invoke ();
+            print("TRigger");
 		}
 	}
 
