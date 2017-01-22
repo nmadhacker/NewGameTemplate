@@ -14,9 +14,11 @@ public class GunControl : MonoBehaviour
 
 	public void Update()
 	{
-		if (Input.GetButtonDown ("Fire1") && currentWeapon.Fire()) 
+		if (!IsFiring && Input.GetButtonDown ("Fire1") && currentWeapon.Fire()) 
 		{
 			IsFiring = true;
+			m_Anim.SetBool ("Fire", true);
+			StartCoroutine (TriggerFireAnimation ());
 		}
 		if (IsFiring && Input.GetButtonUp ("Fire1")) 
 		{
