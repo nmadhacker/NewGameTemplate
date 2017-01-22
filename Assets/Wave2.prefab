@@ -90,10 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 0
-  wLength: 5
-  wWidth: 0.5
-  res: 4
-  shootSpeed: 0.03
+  wLength: 4
+  wWidth: 2
+  res: 8
+  shootSpeed: 0.4
   faceRight: 1
 --- !u!120 &120885574409431916
 LineRenderer:

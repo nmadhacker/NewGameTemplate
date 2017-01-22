@@ -24,6 +24,12 @@ public class GunControl : MonoBehaviour
 			IsFiring = false;
 			currentWeapon.Stop ();
 		}
+        if(IsFiring && !GetComponent<Player>().isGrounded)
+        {
+            m_Anim.SetBool("Fire", false);
+            IsFiring = false;
+            currentWeapon.Stop();
+        }
 		waveTypeSelector ();
 	}
 
