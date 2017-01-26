@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 68945584468283226}
   - component: {fileID: 50758869109855742}
   - component: {fileID: 114345614801054204}
+  - component: {fileID: 220367492901787186}
   m_Layer: 0
   m_Name: EnemyWave
   m_TagString: Untagged
@@ -90,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e81eb15aa62d84bbf9247259f332bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 0}
   size: 0
   wLength: 2
   wWidth: 1.2
@@ -107,6 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7977de7e5fb09b34096a38d83af80c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disapear: 0
+  disapearTime: 0
   hits: 0
 --- !u!120 &120885574409431916
 LineRenderer:
@@ -121,7 +125,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: c37f4e5afba1fff48b65c8f86a20221f, type: 2}
+  - {fileID: 2100000, guid: 648788ccbcdf98843927afdbd831a1f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -204,3 +208,19 @@ LineRenderer:
     alignment: 0
     textureMode: 0
   m_UseWorldSpace: 0
+--- !u!220 &220367492901787186
+LightProbeGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528760162108408}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: -1}
+  - {x: 1, y: -1, z: 1}
+  - {x: 1, y: -1, z: -1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: -1, y: -1, z: 1}
+  - {x: -1, y: -1, z: -1}

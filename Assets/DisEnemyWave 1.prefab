@@ -90,11 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e81eb15aa62d84bbf9247259f332bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 0}
   size: 0
-  wLength: 10
-  wWidth: 0.25
+  wLength: 9
+  wWidth: 0.3
   res: 10
-  shootSpeed: 0.005
+  shootSpeed: 0.001
   faceRight: 1
 --- !u!114 &114345614801054204
 MonoBehaviour:
@@ -108,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disapear: 1
-  disapearTime: 10
+  disapearTime: 7
   hits: 0
 --- !u!120 &120885574409431916
 LineRenderer:
